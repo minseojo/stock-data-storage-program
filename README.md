@@ -10,7 +10,8 @@
 
 ## 사용법
 1. 깃허브 클론
-2. ManageNaverStock -> addAllStocks()에 보고 싶은 주가 인스턴스추가      
+2. NaverFinanceCrawler -> openFile()에 fileName을 원하는 파일 결과 주소로 변경  
+3. ManageNaverStock -> addAllStocks()에 보고 싶은 주가 인스턴스추가      
                           
 ex)   
 Stock 이브이첨단소재 = new Stock("이브이첨단소재", "131400"); // 주식이름, 주식코드  

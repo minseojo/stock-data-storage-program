@@ -16,9 +16,8 @@ public class NaverFinanceCrawler {
     String fileName = "";
     private FileWriter fw = null;
     private PrintWriter out = null;
-    NaverFinanceCrawler(ArrayList<Stock> stocks, ArrayList<String> result) {
+    NaverFinanceCrawler(ArrayList<Stock> stocks) {
         this.stocks = stocks;
-        this.result = result;
     }
 
 

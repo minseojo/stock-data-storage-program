@@ -19,27 +19,41 @@ public class NaverFinanceCrawler {
     NaverFinanceCrawler(ArrayList<Stock> stocks) {
         this.stocks = stocks;
     }
-
-
     public void exe() {
         try {
-            getFile();
+            openFile();
             crawling();
             System.out.println("크롤링 성공");
         } catch (Exception e) {
             System.out.println("크롤링 실패: " + e);
+        } finally {
+            closeFile();
         }
     }
-    private void getFile() {
+    private void openFile() {
         SimpleDateFormat today = new SimpleDateFormat("yyyyMMdd");
         String date = today.format(new Date());
         try {
             fileName = "D:/stock/files/" + date + ".txt";
-            fw = new FileWriter(fileName, true); // 추가모드
+            fw = new FileWriter(fileName, false); // false = 파일 있으면 새로 쓰기
             out = new PrintWriter(fw, true);
         } catch (Exception e) {
             System.out.println("파일 가져오기 실패: " + e);
         }
+    }
+
+    private void closeFile() {
+        try {
+            if(out != null) {
+                out.close();
+            }
+            if(fw != null) {
+                fw.close();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
     public ArrayList<String> crawling () {
         for(Stock stock : stocks) {

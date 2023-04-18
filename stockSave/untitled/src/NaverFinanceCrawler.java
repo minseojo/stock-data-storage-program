@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NaverFinanceCrawler {
-    private static final String FILE_PATH_FORMAT = "D:/stock/files/%s.txt";
+
+    private static final String FILE_PATH_FORMAT = "C:/Users/user/Desktop/stock-data-storage-program/files/%s.txt";
     private static final String STOCK_URL_FORMAT = "https://finance.naver.com/item/sise.naver?code=%s";
     private ArrayList<Stock> stocks = new ArrayList<>(); // 크롤링 할 주식들
 

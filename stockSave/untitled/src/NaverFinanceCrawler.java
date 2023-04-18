@@ -37,7 +37,6 @@ public class NaverFinanceCrawler {
 
     private static String toString(final Stock stock) {
         try {
-            Document doc = Jsoup.connect(String.format(STOCK_URL_FORMAT, stock.getCode())).get();
             return changeStockToFilePrintFormat(stock);
         } catch (IOException e) {
             throw new RuntimeException("크롤링 실패 name:" + stock.getName() + " code: " + stock.getCode());

@@ -34,7 +34,8 @@ public class NaverFinanceCrawler {
         SimpleDateFormat today = new SimpleDateFormat("yyyyMMdd");
         String date = today.format(new Date());
         try {
-            fileName = "D:/stock/files/" + date + ".txt";
+
+            fileName = "C:/Users/user/Desktop/stock-data-storage-program/files/" + date + ".txt";
             fw = new FileWriter(fileName, false); // false = 파일 있으면 새로 쓰기
             out = new PrintWriter(fw, true);
         } catch (Exception e) {
@@ -63,8 +64,15 @@ public class NaverFinanceCrawler {
 
             try {
                 Document doc = Jsoup.connect(url).get();
+
+                Elements today = doc.select("div.rate_info > div.today");
+                String[] elements = today.text().split(" ");
+                String 현재가격 = "현재가격: " + elements[0];
+                String 전일대비증가가격 = "전일대비증가가격: " + elements[4] + "원 " + elements[3];
+                String 등락율 = "등락율: " + elements[7] + " " + elements[8] + "%";
                 Elements element = doc.select("div.rate_info > table.no_info > tbody > tr");
-                String[] elements = element.text().split(" ");
+                elements = element.text().split(" ");
+
                 String 전일종가 = elements[0] + "종가: " + elements[1];
                 String 고가 = elements[3] + ": " + elements[4].substring(0, elements[4].length()/2);
                 String 상한가 = elements[5].substring(1) + " " + elements[6].substring(0, elements[6].length()/2);
@@ -84,13 +92,16 @@ public class NaverFinanceCrawler {
                 System.out.println(거래대금);
                 */
                 String str = 이름 + "\n" +
+                        현재가격 + "\n" +
+                        전일대비증가가격 + "\n" +
+                        등락율 + "\n" +
                         전일종가 + "\n" +
-                        고가 + "\n" +
-                        상한가 + "\n" +
-                        거래량 + "\n" +
                         시가 + "\n" +
                         저가 + "\n" +
+                        고가 + "\n" +
                         하한가 + "\n" +
+                        상한가 + "\n" +
+                        거래량 + "\n" +
                         거래대금 + "\n";
                 
                 out.println(str); // 크롤링 하고 파일에 쓰기

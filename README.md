@@ -14,7 +14,7 @@
 2. 결과가 저장 될 파일위치 변경: NaverFinanceCrawler - FILE_PATH_FORMAT 초기화
 3. enum Stock - 데이터 저장을 원하는 주식 인스턴스 추가                    
 ex)   
-EV_ADVANCED_MATERIALS("이브이첨단소재", "131400"),
+EV_ADVANCED_MATERIALS("이브이첨단소재", "131400"), // 주식이름, 주식코드
   
 아래 링크를 보면 뒤에 코드부분이 이브이첨단소재의 주식코드 부분이다.   
 https://finance.naver.com/item/sise.naver?code=131400 

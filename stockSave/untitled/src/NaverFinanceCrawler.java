@@ -16,13 +16,7 @@ public class NaverFinanceCrawler {
 
     private static final String FILE_PATH_FORMAT = "C:/Users/user/Desktop/stock-data-storage-program/files/%s.txt";
     private static final String STOCK_URL_FORMAT = "https://finance.naver.com/item/sise.naver?code=%s";
-    private ArrayList<Stock> stocks = new ArrayList<>(); // 크롤링 할 주식들
 
-    private static FileWriter fw = null;
-    private static PrintWriter out = null;
-    NaverFinanceCrawler(ArrayList<Stock> stocks) {
-        this.stocks = stocks;
-    }
     public static void exe(final List<Stock> stocks) {
         try (
                 FileWriter fileWriter = new FileWriter(String.format(FILE_PATH_FORMAT, LocalDate.now()), false); // 파일 있으면, 처음부터 쓰기

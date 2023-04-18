@@ -33,10 +33,5 @@ public enum Stock {
     public String getCode() {
         return this.code;
     }
-
-    @Override
-    public String toString() {
-        return "주식이름: " + name + "\n" +
-                "주식코드: " + code;
-    }
+    
 }

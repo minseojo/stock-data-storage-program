@@ -5,4 +5,4 @@
 그래서 크롤링을 통해 20230418.txt 형태로 하루마다 주가의 일일 데이터를 저장해 두려고 만들었다.
 
 
-![image](https://github.com/minseojo/stock-data-storage-program/issues/1#issue-1673365351)
+![image](https://user-images.githubusercontent.com/64322765/232824960-cd197f69-c255-4d11-94a0-37f1b2668e89.png)

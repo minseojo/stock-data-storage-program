@@ -7,7 +7,7 @@
   
 
 ## 결과
-![image](https://user-images.githubusercontent.com/64322765/232834100-3144099b-30e1-4701-9f74-53049fa8c88c.png)  
+![image](https://user-images.githubusercontent.com/64322765/232842136-b42f8e1a-b482-4591-b34a-03377bd5b6d5.png)  
 
 ## 사용법
 1. 깃허브 클론

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public enum Stock {
@@ -22,7 +23,7 @@ public enum Stock {
 
     public static List<Stock> sortedValues() {
         Stock[] values = Stock.values();
-        Arrays.sort(values);
+        Arrays.sort(values, Comparator.comparing(o -> o.name));
         return List.of(values);
     }
 

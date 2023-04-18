@@ -6,5 +6,5 @@
 
 ---
 
-## 결과 사진
+## 결과
 ![image](https://user-images.githubusercontent.com/64322765/232824960-cd197f69-c255-4d11-94a0-37f1b2668e89.png)
